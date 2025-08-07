@@ -15,7 +15,7 @@ export default defineConfig({
   },
   build: {
     rollupOptions: {
-      input: '/src/main.jsx', // pas main.tsx
+      // input: '/src/main.jsx', // pas main.tsx
     },
   },
 });
