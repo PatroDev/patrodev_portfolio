@@ -1,0 +1,18 @@
+<!-- public/flags/gb.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 30">
+  <clipPath id="s">
+    <path d="M0,0 v30 h60 v-30 z" />
+  </clipPath>
+  <clipPath id="t">
+    <path d="M30,15 h30 v15 h-30 z M0,15 h30 v15 h-30 z" />
+  </clipPath>
+  <g clip-path="url(#s)">
+    <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+    <path d="M0,0 l60,30 M60,0 l-60,30" stroke="#fff" stroke-width="6"/>
+    <path d="M0,0 l60,30 M60,0 l-60,30" stroke="#c8102e" stroke-width="4" clip-path="url(#t)"/>
+    <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+    <path d="M30,0 v30 M0,15 h60" stroke="#c8102e" stroke-width="6"/>
+  </g>
+</svg>
+<!-- This SVG represents the flag of Great Britain (Union Jack) -->
+<!-- It features a blue background with red and white crosses -->
