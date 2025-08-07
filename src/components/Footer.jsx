@@ -23,6 +23,7 @@ const Footer = ({ t }) => {
               <span>© 2025 Patrice COMPAORE</span>
               <span>•</span>
               <span className="flex items-center space-x-1">
+                {/* <span>{t.footer.madeWith}</span> */}
                 <span>{t.footer.madeWith}</span>
                 <Heart className="h-4 w-4 text-red-500 fill-current" />
                 <span>{t.footer.madeIn}</span>

@@ -23,7 +23,7 @@ const Contact = ({ t }) => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-white dark:bg-gray-900">
+    <section id="contact" className="py-20 bg-slate-100 dark:bg-gray-900">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -48,7 +48,7 @@ const Contact = ({ t }) => {
                   </div>
                   <div className="ml-4">
                     <p className="text-lg font-medium text-gray-900 dark:text-white">Email</p>
-                    <p className="text-gray-600 dark:text-gray-400">patrice.compaore@email.com</p>
+                    <p className="text-gray-600 dark:text-gray-400">patrodevops20@email.com</p>
                   </div>
                 </div>
 
@@ -68,7 +68,7 @@ const Contact = ({ t }) => {
                   </div>
                   <div className="ml-4">
                     <p className="text-lg font-medium text-gray-900 dark:text-white">{t.contact.info.location}</p>
-                    <p className="text-gray-600 dark:text-gray-400">Laâyoune, Morocco</p>
+                    <p className="text-gray-600 dark:text-gray-400">Marrakech, Morocco</p>
                   </div>
                 </div>
               </div>
@@ -81,13 +81,13 @@ const Contact = ({ t }) => {
               </h4>
               <div className="flex space-x-4">
                 <a
-                  href="#"
+                  href="https:://github.com/PatroDev/patrodev_portfolio"
                   className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors duration-200 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <Github className="h-6 w-6" />
                 </a>
                 <a
-                  href="#"
+                  href="https://linkedin.com/in/patrodev"
                   className="p-3 bg-gray-100 dark:bg-gray-800 rounded-lg hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors duration-200 text-gray-600 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400"
                 >
                   <Linkedin className="h-6 w-6" />
@@ -98,15 +98,15 @@ const Contact = ({ t }) => {
 
           {/* Contact Form */}
           <div className="lg:col-span-2">
-            <form onSubmit={handleSubmit} className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 space-y-6">
+            <form onSubmit={handleSubmit} className="bg-stone-200 dark:bg-gray-800 rounded-2xl p-8 space-y-6">
               <div className="grid sm:grid-cols-2 gap-6">
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    {t.contact.form.name}
+                    {t.contact.form.name} *
                   </label>
                   <input
                     type="text"
-                    id="name"
+                    id="name" 
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
@@ -118,7 +118,7 @@ const Contact = ({ t }) => {
 
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                    Email
+                    Email *
                   </label>
                   <input
                     type="email"
@@ -135,7 +135,7 @@ const Contact = ({ t }) => {
 
               <div>
                 <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  {t.contact.form.subject}
+                  {t.contact.form.subject} *
                 </label>
                 <input
                   type="text"
@@ -151,7 +151,7 @@ const Contact = ({ t }) => {
 
               <div>
                 <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
-                  {t.contact.form.message}
+                  {t.contact.form.message} *
                 </label>
                 <textarea
                   id="message"

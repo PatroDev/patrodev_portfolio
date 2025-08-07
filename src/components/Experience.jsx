@@ -1,5 +1,10 @@
 import React from 'react';
-import { Calendar, MapPin, ExternalLink, Code, Database, Globe } from 'lucide-react';
+import {
+  Calendar,
+  MapPin,
+  ExternalLink,
+  Code
+} from 'lucide-react';
 
 const Experience = ({ t }) => {
   const experiences = [
@@ -12,7 +17,9 @@ const Experience = ({ t }) => {
       technologies: ['Laravel', 'React', 'MySQL', 'NativePHP', 'Electron'],
       description: t.experience.projects.rhApp.description,
       achievements: t.experience.projects.rhApp.achievements,
-      color: 'from-blue-500 to-blue-600'
+      image: '/projects/rh-app.png',
+      demoLink: 'https://github.com/PatroDev/GestionCV_Marjane_LSH.git',
+      color: 'from-blue-500 to-blue-700'
     },
     {
       id: 'banking-app',
@@ -23,7 +30,9 @@ const Experience = ({ t }) => {
       technologies: ['Laravel', 'React', 'Inertia.js', 'MySQL', 'Bootstrap'],
       description: t.experience.projects.bankingApp.description,
       achievements: t.experience.projects.bankingApp.achievements,
-      color: 'from-green-500 to-green-600'
+      image: '/projects/banking-app.png',
+      demoLink: 'https://github.com/PatroDev/NeoBank_WebApp.git',
+      color: 'from-green-500 to-green-700'
     },
     {
       id: 'purchase-platform',
@@ -34,7 +43,9 @@ const Experience = ({ t }) => {
       technologies: ['Laravel', 'MySQL', 'React', 'Bootstrap'],
       description: t.experience.projects.purchasePlatform.description,
       achievements: t.experience.projects.purchasePlatform.achievements,
-      color: 'from-purple-500 to-purple-600'
+      image: '/projects/purchase-platform.png',
+      demoLink: 'https://github.com/PatroDev/gestion_achats.git',
+      color: 'from-purple-500 to-purple-700'
     },
     {
       id: 'icpe-website',
@@ -45,12 +56,27 @@ const Experience = ({ t }) => {
       technologies: ['PHP', 'JavaScript', 'MySQL', 'HTML', 'CSS', 'Bootstrap'],
       description: t.experience.projects.icpeWebsite.description,
       achievements: t.experience.projects.icpeWebsite.achievements,
+      image: '/projects/icpe-website.png',
+      demoLink: 'https://icpeliberia.fast-page.org',
+      color: 'from-orange-500 to-orange-600'
+    },
+    {
+      id: 'decor-site',
+      title: t.experience.projects.decorsite.title,
+      company: 'PROJECT DECOR',
+      location: 'Laâyoune',
+      period: t.experience.projects.decorsite.period,
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+      description: t.experience.projects.decorsite.description,
+      achievements: t.experience.projects.decorsite.achievements,
+      image: '/projects/decor-site.png',
+      demoLink: 'https://decorsite.publicvm.com',
       color: 'from-orange-500 to-orange-600'
     }
   ];
 
   return (
-    <section id="experience" className="py-20 bg-white dark:bg-gray-900">
+    <section id="experience" className="py-20 bg-stone-300 dark:bg-gray-600">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -61,80 +87,93 @@ const Experience = ({ t }) => {
           </p>
         </div>
 
-        <div className="space-y-8">
-          {experiences.map((exp, index) => (
+        <div className="flex flex-wrap gap-8 justify-center">
+          {experiences.map((exp) => (
             <div
               key={exp.id}
-              className="bg-gray-50 dark:bg-gray-800 rounded-2xl p-8 hover:shadow-xl transition-all duration-300 border-l-4 border-blue-500"
+              className="group relative w-full md:w-[45%] lg:w-[30%] bg-gradient-to-br dark:from-gray-800 from-white to-stone-200 dark:to-gray-900 rounded-t-3xl overflow-auto shadow-xl hover:scale-[1.015] transition-all duration-300 border border-gray-200 dark:border-gray-800"
             >
-              <div className="grid lg:grid-cols-3 gap-8">
-                {/* Left Column - Header Info */}
-                <div className="lg:col-span-1">
-                  <div className={`inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r ${exp.color} mb-4`}>
-                    <Calendar className="h-4 w-4 mr-2" />
-                    {exp.period}
+              <div className='mb-6 relative'>
+                <img
+                  src={exp.image}
+                  alt={exp.title}
+                  className="h-48 w-full p-3 object-cover transform transition-transform duration-500 ease-in-out hover:scale-105"
+                />
+
+                {/* Légende en bas de l'image */}
+                <div className="absolute w-full bg-gradient-to-t from-black/70 to-transparent text-white px-4 py-2 flex justify-between items-center">
+                  {/* <span className="text-sm font-medium">{exp.title}</span> */}
+                  
+                  <button
+                    onClick={(e) => {
+                      e.stopPropagation(); // pour éviter les conflits avec le clic sur la carte
+                      window.open(exp.image, '_blank', 'noopener,noreferrer');
+                    }}
+                    className="text-xs bg-white/20 backdrop-blur-md px-3 py-1 rounded-full hover:bg-white/40 transition"
+                  >
+                    Voir
+                  </button>
+                </div>
+              </div>
+
+              <div className="p-6 space-y-4">
+                <div className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium text-white bg-gradient-to-r ${exp.color}`}>
+                  <Calendar className="h-4 w-4 mr-2" />
+                  {exp.period}
+                </div>
+
+                <h3 className="text-xl font-bold text-gray-900 dark:text-white">
+                  {exp.title}
+                </h3>
+
+                <div className="text-sm text-gray-700 dark:text-gray-300 space-y-1">
+                  <div className="flex items-center">
+                    <Code className="h-4 w-4 mr-2" />
+                    {exp.company}
                   </div>
-                  
-                  <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
-                    {exp.title}
-                  </h3>
-                  
-                  <div className="space-y-2 text-gray-600 dark:text-gray-400">
+                  {exp.location && (
                     <div className="flex items-center">
-                      <Code className="h-4 w-4 mr-2" />
-                      <span className="font-medium">{exp.company}</span>
+                      <MapPin className="h-4 w-4 mr-2" />
+                      {exp.location}
                     </div>
-                    {exp.location && (
-                      <div className="flex items-center">
-                        <MapPin className="h-4 w-4 mr-2" />
-                        <span>{exp.location}</span>
-                      </div>
-                    )}
-                  </div>
+                  )}
+                </div>
 
-                  {/* Technologies */}
-                  <div className="mt-6">
-                    <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-3">
-                      {t.experience.technologies}:
-                    </h4>
-                    <div className="flex flex-wrap gap-2">
-                      {exp.technologies.map((tech) => (
-                        <span
-                          key={tech}
-                          className="px-3 py-1 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-sm border border-gray-200 dark:border-gray-600"
-                        >
-                          {tech}
-                        </span>
-                      ))}
-                    </div>
+                <div>
+                  <h4 className="text-sm font-semibold text-gray-900 dark:text-white mb-2">
+                    {t.experience.technologies}:
+                  </h4>
+                  <div className="flex flex-wrap gap-1">
+                    {exp.technologies.map((tech) => (
+                      <span
+                        key={tech}
+                        className="px-2 py-0.5 bg-white dark:bg-gray-700 text-gray-700 dark:text-gray-300 rounded-full text-xs border border-gray-200 dark:border-gray-600"
+                      >
+                        {tech}
+                      </span>
+                    ))}
                   </div>
                 </div>
 
-                {/* Right Column - Content */}
-                <div className="lg:col-span-2 space-y-6">
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      {t.experience.description}
-                    </h4>
-                    <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-                      {exp.description}
-                    </p>
-                  </div>
+                <p className="text-sm text-gray-600 dark:text-gray-400">
+                  {exp.description}
+                </p>
 
-                  <div>
-                    <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-3">
-                      {t.experience.achievements}
-                    </h4>
-                    <ul className="space-y-2">
-                      {exp.achievements.map((achievement, i) => (
-                        <li key={i} className="flex items-start">
-                          <div className="h-2 w-2 bg-blue-500 rounded-full mt-2 mr-3 flex-shrink-0"></div>
-                          <span className="text-gray-700 dark:text-gray-300">{achievement}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
+                <ul className="list-disc list-inside text-sm text-gray-600 dark:text-gray-400 space-y-1">
+                  {exp.achievements.map((a, i) => (
+                    <li key={i}>{a}</li>
+                  ))}
+                </ul>
+
+                <a
+                  href={exp.demoLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 mt-3 text-sm font-medium text-white bg-gradient-to-r from-sky-600 to-teal-500 px-4 py-2 rounded-full hover:from-sky-700 hover:to-teal-600 transition"
+                >
+                  <ExternalLink className="h-4 w-4" />
+                  {t.experience.viewDemo || 'Voir le projet'}
+                </a>
               </div>
             </div>
           ))}

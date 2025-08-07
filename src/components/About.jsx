@@ -50,13 +50,13 @@ const About = ({ t }) => {
   ];
 
   const stats = [
-    { number: '4+', label: 'Projets Réalisés', icon: <Award className="h-6 w-6" /> },
+    { number: '6+', label: 'Grands Projets Réalisés', icon: <Award className="h-6 w-6" /> },
     { number: '10+', label: 'Technologies', icon: <Code2 className="h-6 w-6" /> },
     { number: '2+', label: 'Années Formation', icon: <Zap className="h-6 w-6" /> }
   ];
 
   return (
-    <section id="about" ref={sectionRef} className="py-20 bg-white dark:bg-gray-900 relative overflow-hidden">
+    <section id="about" ref={sectionRef} className="py-20 bg-accent-300 border-zinc-500 rounded-full dark:bg-amber-950 relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-10 right-10 w-32 h-32 bg-blue-500/5 rounded-full blur-2xl animate-float"></div>
@@ -78,7 +78,7 @@ const About = ({ t }) => {
           {stats.map((stat, index) => (
             <div
               key={index}
-              className="text-center p-6 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-float"
+              className="text-center p-2 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-700 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105 animate-float"
               style={{ animationDelay: `${index * 0.2}s` }}
             >
               <div className="text-blue-600 dark:text-blue-400 mb-4 flex justify-center">
@@ -127,7 +127,7 @@ const About = ({ t }) => {
             {features.map((feature, index) => (
               <div
                 key={index}
-                className="group p-6 bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-700 rounded-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-rotate-1 animate-fadeInUp"
+                className="group p-6  bg-gradient-to-br from-gray-50 to-white dark:from-gray-800 dark:to-gray-700 rounded-xl hover:shadow-2xl transition-all duration-500 transform hover:scale-105 hover:-rotate-1 animate-fadeInUp"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${feature.color} flex items-center justify-center text-white mb-4 mx-auto group-hover:scale-110 group-hover:rotate-12 transition-all duration-300 animate-glow`}>

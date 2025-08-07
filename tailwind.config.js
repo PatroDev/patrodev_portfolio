@@ -90,12 +90,46 @@ export default {
       },
       fontFamily: {
         sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Space Grotesk', 'sans-serif'],
+        mono: ['IBM Plex Mono', 'monospace'],
       },
       spacing: {
         18: '4.5rem',
         88: '22rem',
       },
+      // typography: (theme) => ({
+      //   DEFAULT: {
+      //     css: {
+      //       color: theme('colors.gray.800'),
+      //       fontFamily: theme('fontFamily.sans').join(', '),
+      //       a: { color: theme('colors.blue.600'), fontWeight: '500' },
+      //       h1: {
+      //         fontFamily: theme('fontFamily.heading').join(', '),
+      //         fontWeight: '700',
+      //         letterSpacing: '-0.02em',
+      //         fontSize: theme('fontSize.4xl'),
+      //       },
+      //       h2: {
+      //         fontFamily: theme('fontFamily.heading').join(', '),
+      //         fontWeight: '600',
+      //         fontSize: theme('fontSize.3xl'),
+      //       },
+      //       p: {
+      //         fontSize: theme('fontSize.base'),
+      //         lineHeight: '1.8',
+      //         fontWeight: '300',
+      //       },
+      //       code: {
+      //         fontFamily: theme('fontFamily.mono').join(', '),
+      //         backgroundColor: theme('colors.gray.100'),
+      //         padding: '0.2em 0.4em',
+      //         borderRadius: theme('borderRadius.sm'),
+      //       },
+      //     },
+      //   },
+      // }),
     },
   },
   plugins: [],
+  // plugins: [require('@tailwindcss/typography')],
 };

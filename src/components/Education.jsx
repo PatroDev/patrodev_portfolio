@@ -9,7 +9,7 @@ const Education = ({ t }) => {
       location: 'Laâyoune, Morocco',
       period: '2023-2025',
       description: t.education.specialist.description,
-      color: 'from-blue-500 to-blue-600'
+      color: 'from-green-500 to-blue-600'
     },
     {
       degree: t.education.baccalaureate.degree,
@@ -17,12 +17,12 @@ const Education = ({ t }) => {
       location: 'Burkina Faso',
       period: '2021-2022',
       description: t.education.baccalaureate.description,
-      color: 'from-green-500 to-green-600'
+      color: 'from-blue-500 to-green-600'
     }
   ];
 
   return (
-    <section id="education" className="py-20 bg-gray-50 dark:bg-gray-800">
+    <section id="education" className="py-20 bg-slate-300 dark:bg-gray-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-4xl font-bold text-gray-900 dark:text-white mb-4">
@@ -37,7 +37,7 @@ const Education = ({ t }) => {
           {education.map((edu, index) => (
             <div
               key={index}
-              className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+              className="bg-stone-300 dark:bg-amber-900 rounded-2xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
             >
               <div className={`w-16 h-16 rounded-2xl bg-gradient-to-r ${edu.color} flex items-center justify-center text-white mb-6`}>
                 <GraduationCap className="h-8 w-8" />
@@ -74,7 +74,7 @@ const Education = ({ t }) => {
 
         {/* Additional Certifications Section */}
         <div className="mt-16 text-center">
-          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
+          <div className="bg-stone-300 dark:bg-gray-900 rounded-2xl p-8 shadow-lg">
             <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-6">
               {t.education.additionalTitle}
             </h3>
@@ -88,7 +88,7 @@ const Education = ({ t }) => {
               ].map((skill, index) => (
                 <div
                   key={index}
-                  className="p-4 bg-gray-50 dark:bg-gray-800 rounded-xl hover:shadow-md transition-shadow duration-200"
+                  className="p-4 bg-gray-50 dark:bg-amber-900 rounded-xl hover:shadow-md transition-shadow duration-200"
                 >
                   <div className="text-blue-600 dark:text-blue-400 mb-2">
                     <Award className="h-6 w-6 mx-auto" />

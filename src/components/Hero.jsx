@@ -9,7 +9,7 @@ const Hero = ({ t }) => {
   }, []);
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-teal-50 dark:from-gray-900 dark:via-gray-800 dark:to-gray-900 pt-16 overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-orange-100 to-teal-50 dark:from-gray-900 dark:via-slate-600 dark:to-gray-900 pt-16 overflow-hidden">
       {/* Animated Background Elements */}
       <div className="absolute inset-0">
         <div className="absolute top-1/4 left-10 w-20 h-20 bg-blue-500/10 rounded-full blur-xl animate-float"></div>
@@ -39,12 +39,14 @@ const Hero = ({ t }) => {
         {/* Main Content */}
         <div className="space-y-6">
           <div className={`space-y-2 transition-all duration-1000 delay-300 ${isVisible ? 'animate-slideUp' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-gray-900 dark:text-white">
-              <span className="bg-gradient-to-r from-blue-600 via-purple-600 to-teal-600 bg-clip-text text-transparent animate-gradient-x">
+            <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-gray-900 dark:text-white leading-snug">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 via-fuchsia-600 to-blue-600 drop-shadow-sm">
                 Patrice
               </span>
               <br />
-              <span className="text-gray-800 dark:text-gray-200 animate-typewriter">COMPAORE</span>
+              <span className="uppercase tracking-wider text-gray-700 dark:text-gray-300 italic font-light">
+                COMPAORE
+              </span>
             </h1>
             <p className="text-xl sm:text-2xl text-gray-600 dark:text-gray-400 font-medium animate-pulse-text">
               {t.hero.title}
@@ -63,7 +65,15 @@ const Hero = ({ t }) => {
 
           {/* CTA Buttons */}
           <div className={`flex flex-col sm:flex-row gap-4 justify-center items-center transition-all duration-1000 delay-900 ${isVisible ? 'animate-fadeInUp' : 'opacity-0 translate-y-10'}`}>
-            <button onClick={()=>{print()}} className="group bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2 animate-glow-button">
+            <button onClick={() => {
+                      const link = document.createElement('a');
+                      link.href = '/my-cv.pdf'; // chemin relatif depuis le dossier public
+                      link.download = 'PatroDev-CV.pdf'; // nom du fichier lors du téléchargement
+                      document.body.appendChild(link);
+                      link.click();
+                      document.body.removeChild(link);
+                    }} 
+                    className="group bg-gradient-to-r from-blue-600 to-teal-600 text-white px-8 py-4 rounded-full font-semibold text-lg hover:shadow-2xl hover:scale-105 transition-all duration-300 flex items-center space-x-2 animate-glow-button">
               <Download className="h-5 w-5 group-hover:animate-bounce" />
               <span>{t.hero.downloadCV}</span>
             </button>
@@ -83,7 +93,7 @@ const Hero = ({ t }) => {
           <div className={`flex justify-center space-x-6 pt-8 transition-all duration-1000 delay-1100 ${isVisible ? 'animate-fadeInUp' : 'opacity-0 translate-y-10'}`}>
             {[
               { icon: Github, href: 'https://github.com/PatroDev/patrodev_portfolio.git', label: 'GitHub' },
-              { icon: Linkedin, href: '#', label: 'LinkedIn' },
+              { icon: Linkedin, href: 'https://linkedin.com/in/patrodev', label: 'LinkedIn' },
               { icon: Mail, href: '#contact', label: 'Email' }
             ].map((social, index) => (
               <a

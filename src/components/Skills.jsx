@@ -145,7 +145,7 @@ const Skills = ({ t }) => {
   };
 
   return (
-    <section id="skills" ref={sectionRef} className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50 dark:from-gray-800 dark:via-gray-900 dark:to-gray-800 relative overflow-hidden">
+    <section id="skills" ref={sectionRef} className="py-20 bg-gradient-to-br from-red-100 via-yellow-50 to-blue-50 dark:from-gray-800 dark:via-stone-700 dark:to-gray-800 relative overflow-hidden">
       {/* Animated Background */}
       <div className="absolute inset-0">
         <div className="absolute top-20 left-20 w-40 h-40 bg-blue-500/10 rounded-full blur-3xl animate-float"></div>
