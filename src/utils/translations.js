@@ -72,7 +72,7 @@ export const translations = {
       projects: {
         rhApp: {
           title: 'Application Desktop RH - Gestion des CV',
-          period: 'Juillet 2025',
+          period: 'Juillet - Août 2025',
           description: 'Développement d\'une application desktop RH multiplateforme dédiée à la gestion des CV des candidats pour le service des ressources humaines de MARJANE HOLDING.',
           achievements: [
             'Création d\'un formulaire complet de dépôt de CV (études, expériences, compétences, fichiers joints)',
@@ -84,7 +84,7 @@ export const translations = {
         bankingApp: {
           title: 'Application Web Bancaire - Projet de Fin d\'Études',
           company: 'Projet Académique',
-          period: 'Mai 2025',
+          period: 'Mai -Juin 2025',
           description: 'Conception et développement d\'une application web bancaire complète permettant aux utilisateurs de gérer leurs comptes, virements, consultation des soldes et historiques de manière sécurisée.',
           achievements: [
             'Authentification sécurisée, gestion des utilisateurs et rôles (admin/client)',
@@ -95,7 +95,7 @@ export const translations = {
         },
         purchasePlatform: {
           title: 'Plateforme de Gestion des Achats - Stage à Distance',
-          period: 'Avril 2025',
+          period: 'Mars - Avril 2025',
           description: 'Développement d\'une plateforme web destinée à la gestion des processus d\'achat au sein d\'une entreprise industrielle (demande d\'achat, bon de commande, fournisseurs, stock).',
           achievements: [
             'Analyse des besoins fonctionnels avec l\'équipe de projet',
@@ -106,13 +106,29 @@ export const translations = {
         },
         icpeWebsite: {
           title: 'Site Web pour la Promotion des Droits des Enfants et des Femmes',
-          period: 'Juillet 2024',
+          period: 'Juillet - Août 2024',
           description: 'Création d\'un site web informatif et participatif dédié à la promotion des droits des enfants et à la lutte contre les violences faites aux femmes.',
           achievements: [
             'Mise en place d\'une base de données MySQL pour la gestion des contenus, utilisateurs, et dons',
             'Intégration de pages clés : Accueil, Sponsorship, Donate, Blog & Archives, Connexion, À propos',
             'Développement back-end en PHP, front-end en JavaScript',
             'Interface responsive avec Bootstrap'
+          ]
+        },
+        aebmlaayoune: {
+          title: 'Site Web pour l\'Association des étudiants et stagiaires Burkinabès - section de Laâyoune',
+          period: 'Janvier 2025',
+          description: 'Création d\'un site web pour l\'association des étudiants et stagiaires burkinabès de Laâyoune, visant à promouvoir les activités de l\'association et à faciliter la communication entre les membres.',
+          achievements: [
+            'Analyse des besoins et définition des fonctionnalités clés',
+            'Conception de l\'interface utilisateur avec une navigation intuitive',
+            'Développement Full-Stack avec MERN stack (MongoDB, Express, React, Node.js)',
+            'Mise en place d\'un système de gestion des membres et des événements',
+            'Intégration d\'un blog pour partager les actualités et les événements de l\'association',
+            'Optimisation pour le référencement (SEO) et la performance',
+            'Documentation facilitant aux membres à l\'utilisation du site et à la gestion des contenus',
+            'Hébergement et déploiement du site sur un serveur sécurisé'
+
           ]
         },
         decorsite: {
@@ -250,7 +266,7 @@ export const translations = {
       projects: {
         rhApp: {
           title: 'HR Desktop Application - CV Management',
-          period: 'July 2025',
+          period: 'July - August 2025',
           description: 'Development of a multiplatform HR desktop application dedicated to managing candidate CVs for the human resources department of MARJANE HOLDING.',
           achievements: [
             'Creation of a complete CV submission form (studies, experience, skills, attached files)',
@@ -262,7 +278,7 @@ export const translations = {
         bankingApp: {
           title: 'Banking Web Application - Final Project',
           company: 'Academic Project',
-          period: 'May 2025',
+          period: 'May - June 2025',
           description: 'Design and development of a complete banking web application allowing users to manage their accounts, transfers, balance consultation and transaction history securely.',
           achievements: [
             'Secure authentication, user and role management (admin/client)',
@@ -273,7 +289,7 @@ export const translations = {
         },
         purchasePlatform: {
           title: 'Purchase Management Platform - Remote Internship',
-          period: 'April 2025',
+          period: 'March - April 2025',
           description: 'Development of a web platform for managing purchasing processes within an industrial company (purchase request, purchase order, suppliers, inventory).',
           achievements: [
             'Functional requirements analysis with the project team',
@@ -282,9 +298,25 @@ export const translations = {
             'Documentation and local production deployment'
           ]
         },
+        aebmlaayoune: {
+          title: 'Website for the Association of Burkinabè Students and Trainees - Laâyoune Section',
+          period: 'January 2025',
+          description: 'Creation of a website for the association of Burkinabè students and trainees in Laâyoune, aimed at promoting the association\'s activities and facilitating communication among members.',
+          achievements: [
+            'Analysis of needs and definition of key features',
+            'Interface design with intuitive navigation',
+            'Full-Stack development with MERN stack (MongoDB, Express, React, Node.js)',
+            'Implementation of a member and event management system',
+            'Integration of a blog to share news and events of the association',
+            'Optimization for SEO and performance',
+            'Documentation facilitating members in using the site and managing content',
+            'Hosting and deployment of the site on a secure server'
+
+          ]
+        },
         icpeWebsite: {
           title: 'Website for Promoting Children\'s and Women\'s Rights',
-          period: 'July 2024',
+          period: 'July - August 2024',
           description: 'Creation of an informative and participatory website dedicated to promoting children\'s rights and fighting violence against women.',
           achievements: [
             'Implementation of a MySQL database for content, user, and donation management',

@@ -15,7 +15,7 @@ import { translations } from './utils/translations';
 
 function App() {
   
-    const { scrollYProgress } = useScroll()
+  const { scrollYProgress } = useScroll()
   const [darkMode, setDarkMode] = useState(false);
   const [language, setLanguage] = useState('fr');
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);

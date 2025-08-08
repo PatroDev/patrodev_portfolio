@@ -25,7 +25,7 @@ const Experience = ({ t }) => {
       id: 'banking-app',
       title: t.experience.projects.bankingApp.title,
       company: t.experience.projects.bankingApp.company,
-      location: '',
+      location: 'Etablissement CMC - Laâyoune Sakia El Hamra',
       period: t.experience.projects.bankingApp.period,
       technologies: ['Laravel', 'React', 'Inertia.js', 'MySQL', 'Bootstrap'],
       description: t.experience.projects.bankingApp.description,
@@ -61,6 +61,19 @@ const Experience = ({ t }) => {
       color: 'from-orange-500 to-orange-600'
     },
     {
+      id: 'aebm-laayoune',
+      title: t.experience.projects.aebmlaayoune.title,
+      company: 'AEBM LAÂYOUNE',
+      location: 'Laâyoune',
+      period: t.experience.projects.aebmlaayoune.period,
+      technologies: ['Vite', 'React', 'Typescript', 'TailwindCSS', 'framer-motion', 'lucide-react'],
+      description: t.experience.projects.aebmlaayoune.description,
+      achievements: t.experience.projects.aebmlaayoune.achievements,
+      image: '/projects/aebm-laayoune.png',
+      demoLink: 'https://aebm-laayoune.vercel.app',
+      color: 'from-orange-500 to-orange-600'
+    },
+    {
       id: 'decor-site',
       title: t.experience.projects.decorsite.title,
       company: 'PROJECT DECOR',
@@ -70,7 +83,7 @@ const Experience = ({ t }) => {
       description: t.experience.projects.decorsite.description,
       achievements: t.experience.projects.decorsite.achievements,
       image: '/projects/decor-site.png',
-      demoLink: 'https://decorsite.publicvm.com',
+      demoLink: 'https://decor-site.netlify.app',
       color: 'from-orange-500 to-orange-600'
     }
   ];
