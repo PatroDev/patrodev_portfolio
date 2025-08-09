@@ -137,7 +137,7 @@ export const translations = {
           description: "Conception et développement d’un site vitrine moderne mettant en valeur les services de décoration événementielle (mariages, réceptions, séminaires) et de décoration d’intérieur. L’objectif principal était de renforcer la présence en ligne et d’optimiser la prise de contact client.",
           achievements: [
             "Définition de l’arborescence : Accueil, Services, Réalisations, Contact",
-            "Développement full-stack PHP / JavaScript avec base de données MySQL",
+            "Développement Full-Stack en MERN Stack / JavaScript avec base de données MongoDB",
             "Mise en avant dynamique des projets à travers une galerie filtrable",
             "Design responsive et esthétique avec Bootstrap pour une navigation fluide sur tous les appareils"
           ]
@@ -331,7 +331,7 @@ export const translations = {
           description: "Design and development of a modern showcase website highlighting event decoration services (weddings, receptions, corporate events) and interior design solutions. The main goal was to strengthen online presence and optimize customer inquiries.",
           achievements: [
             "Defined the site structure: Home, Services, Portfolio, Contact",
-            "Full-stack development in PHP / JavaScript with MySQL database",
+            "Full-stack development in MERN Stack / JavaScript with MongoDB database",
             "Dynamic project gallery with filterable showcase",
             "Responsive and elegant interface using Bootstrap for seamless navigation on all devices"
           ]

@@ -50,7 +50,7 @@ const Experience = ({ t }) => {
     {
       id: 'icpe-website',
       title: t.experience.projects.icpeWebsite.title,
-      company: 'ICPE ORGANIZATION',
+      company: 'ICPE (Initiative for Children Protection and Empowerment) - Non-Profit Organization',
       location: 'Liberia',
       period: t.experience.projects.icpeWebsite.period,
       technologies: ['PHP', 'JavaScript', 'MySQL', 'HTML', 'CSS', 'Bootstrap'],
@@ -76,10 +76,10 @@ const Experience = ({ t }) => {
     {
       id: 'decor-site',
       title: t.experience.projects.decorsite.title,
-      company: 'PROJECT DECOR',
-      location: 'Laâyoune',
+      company: 'PROJECT BONOUR 2J DECOR',
+      location: 'Burkina Faso (Remote)',
       period: t.experience.projects.decorsite.period,
-      technologies: ['JavaScript', 'HTML', 'CSS', 'Bootstrap'],
+      technologies: ['JavaScript', 'HTML', 'CSS', 'Bootstrap', 'React', 'vite', 'framer-motion', 'lucide-react'],
       description: t.experience.projects.decorsite.description,
       achievements: t.experience.projects.decorsite.achievements,
       image: '/projects/decor-site.png',
