@@ -118,7 +118,7 @@ const Header = ({
             <button
               onClick={toggleLanguage}
               aria-label="Toggle language"
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-200 hover:scale-110"
+              className="flex items-center gap-1 p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-200 hover:scale-110"
             >
               <img
                 src={language === 'fr' ? frFlag : gbFlag}
@@ -126,10 +126,10 @@ const Header = ({
                 title={language === 'fr' ? 'Français' : 'English'}
                 className="h-5 w-5 rounded-full shadow ring-1 ring-gray-300 dark:ring-gray-600 bg-white/20 backdrop-blur-md transition-transform duration-300 ease-in-out"
               />
-            </button>
             <span className="text-sm font-semibold text-gray-600 dark:text-gray-300">
               {language.toUpperCase()}
             </span>
+            </button>
 
             <button
               onClick={toggleDarkMode}
