@@ -134,7 +134,7 @@ const Header = ({
             <button
               onClick={toggleDarkMode}
               aria-label="Toggle dark mode"
-              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-200 hover:scale-110"
+              className="p-2 rounded-lg bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 dark:text-white transition duration-200 hover:scale-110"
             >
               {darkMode ? <Sun className="h-5 w-5" /> : <Moon className="h-5 w-5" />}
             </button>
