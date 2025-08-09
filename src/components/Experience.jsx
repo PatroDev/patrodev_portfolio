@@ -83,7 +83,7 @@ const Experience = ({ t }) => {
       description: t.experience.projects.decorsite.description,
       achievements: t.experience.projects.decorsite.achievements,
       image: '/projects/decor-site.png',
-      demoLink: 'https://decor-site.netlify.app',
+      demoLink: 'https://decor-site.vercel.app',
       color: 'from-orange-500 to-orange-600'
     }
   ];

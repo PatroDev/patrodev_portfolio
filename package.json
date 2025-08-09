@@ -1,10 +1,10 @@
 {
-  "name": "vite-react-starter",
+  "name": "patrodev_portfolio",
   "private": true,
-  "version": "0.0.1",
+  "version": "1.0.1",
   "type": "module",
   "license": "MIT",
-  "description": "A Vite + React starter template with Tailwind CSS and ESLint",
+  "description": "This is patrodev portfolio project, built with Vite, React, and Tailwind CSS.",
   "author": "PatroDev",
   "repository": {
     "type": "git",
