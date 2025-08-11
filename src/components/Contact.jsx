@@ -26,8 +26,8 @@ const SUPABASE_ANON_KEY = TA_CLE_PUBLIQUE;
 // qui est utilisée pour une approche plus avancée de la protection contre les spams.
 // La clé reCAPTCHA v2 est généralement utilisée pour les formulaires de contact,
 // les commentaires, ou toute autre interaction utilisateur où une validation est nécessaire.
-const TA_CLE_SITE_RECAPTCHA = "6LfQv6IrAAAAAID6fZ9_P4bwoeRpjDaHh2cFRFH2"; //CLE_v2
-// const TA_CLE_SITE_RECAPTCHA = "6Le3m6IrAAAAAHs75Vw77f695Fr-vHBF04I0ricR"; //CLE_v3
+const TA_CLE_SITE_RECAPTCHA = "6Le3m6IrAAAAAHs75Vw77f695Fr-vHBF04I0ricR"; //CLE_v3
+// const TA_CLE_SITE_RECAPTCHA = "6LfQv6IrAAAAAID6fZ9_P4bwoeRpjDaHh2cFRFH2"; //CLE_v2
 const RECAPTCHA_SITE_KEY = TA_CLE_SITE_RECAPTCHA;  
 
 const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
