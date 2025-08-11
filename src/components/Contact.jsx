@@ -69,7 +69,7 @@ const Contact = ({ t }) => {
       return;
     }
 
-    const { error } = await supabase.from("messages").insert([formData]);
+    const { error } = await supabase.from("portfolio-messages").insert([formData]);
 
     if (error) {
       alert("Erreur lors de l'envoi : " + error.message);
