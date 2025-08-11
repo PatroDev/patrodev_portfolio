@@ -1,5 +1,35 @@
-import React, { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Mail, Phone, MapPin, Send, Github, Linkedin } from 'lucide-react';
+
+import { createClient } from "@supabase/supabase-js";
+import ReCAPTCHA from "react-google-recaptcha";
+
+const SUPABASE_URL = "https://wngdyuvcyiseauwxyqrs.supabase.co";        // Remplace par ton URL
+
+// Remplace par ta clé publique supabase
+// Tu peux la trouver dans ton tableau de bord Supabase sous "Settings" > "API"
+// Assure-toi de ne pas exposer ta clé secrète dans le frontend
+// Pour des raisons de sécurité, utilise uniquement la clé publique dans le frontend
+// La clé publique est généralement utilisée pour les opérations côté client
+// et la clé secrète est utilisée côté serveur.
+const TA_CLE_PUBLIQUE = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InduZ2R5dXZjeWlzZWF1d3h5cXJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ5MTI1NTIsImV4cCI6MjA3MDQ4ODU1Mn0.ZPHckuntDXDABdLdS55eEuWs6elk520SHOeud1blE_0";
+const SUPABASE_ANON_KEY = TA_CLE_PUBLIQUE;            
+
+ // Ta clé reCAPTCHA v2
+// Remplace par ta clé reCAPTCHA v2
+// Tu peux obtenir une clé reCAPTCHA v2 en te rendant sur le site de Google reCAPTCHA
+// Assure-toi de configurer correctement le domaine autorisé pour éviter les erreurs
+// La clé reCAPTCHA v2 est utilisée pour protéger ton formulaire contre les spams
+// Elle est généralement utilisée pour valider les soumissions de formulaires
+// et empêcher les robots de soumettre des données automatiquement.
+// La clé reCAPTCHA v2 est différente de la clé reCAPTCHA v3,
+// qui est utilisée pour une approche plus avancée de la protection contre les spams.
+// La clé reCAPTCHA v2 est généralement utilisée pour les formulaires de contact,
+// les commentaires, ou toute autre interaction utilisateur où une validation est nécessaire.
+const TA_CLE_SITE_RECAPTCHA = "6Le3m6IrAAAAAHs75Vw77f695Fr-vHBF04I0ricR";
+const RECAPTCHA_SITE_KEY = TA_CLE_SITE_RECAPTCHA;  
+
+const supabase = createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
 
 const Contact = ({ t }) => {
   const [formData, setFormData] = useState({
@@ -8,18 +38,47 @@ const Contact = ({ t }) => {
     subject: '',
     message: ''
   });
+  
+  const [loading, setLoading] = useState(false);
+  const recaptchaRef = useRef(null);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   // Handle form submission here
+  //   console.log('Form submitted:', formData);
+  // };
 
   const handleChange = (e) => {
-    setFormData({
-      ...formData,
-      [e.target.name]: e.target.value
-    });
+    // setFormData({
+    //   ...formData,
+    //   [e.target.name]: e.target.value
+    // });
+    setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+    const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true);
+
+    const token = await recaptchaRef.current.executeAsync();
+    recaptchaRef.current.reset();
+
+    if (!token) {
+      alert("Veuillez valider le reCAPTCHA.");
+      setLoading(false);
+      return;
+    }
+
+    const { error } = await supabase.from("messages").insert([formData]);
+
+    if (error) {
+      alert("Erreur lors de l'envoi : " + error.message);
+    } else {
+      alert("Message envoyé avec succès !");
+      setFormData({ name: "", email: "", subject: "", message: "" });
+    }
+
+    setLoading(false);
   };
 
   return (
@@ -58,7 +117,7 @@ const Contact = ({ t }) => {
                   </div>
                   <div className="ml-4">
                     <p className="text-lg font-medium text-gray-900 dark:text-white">{t.contact.info.phone}</p>
-                    <p className="text-gray-600 dark:text-gray-400">+212 XXX XXX XXX</p>
+                    <p className="text-gray-600 dark:text-gray-400">+212 669688946</p>
                   </div>
                 </div>
 
@@ -165,12 +224,18 @@ const Contact = ({ t }) => {
                 />
               </div>
 
+               <ReCAPTCHA
+                  sitekey={RECAPTCHA_SITE_KEY}
+                  size="invisible"
+                  ref={recaptchaRef}
+                />
+
               <button
                 type="submit"
                 className="w-full bg-gradient-to-r from-blue-600 to-teal-600 text-white py-4 px-8 rounded-lg font-semibold text-lg hover:shadow-xl hover:scale-105 transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <Send className="h-5 w-5" />
-                <span>{t.contact.form.send}</span>
+                <span>{loading ? "Envoi..." : t.contact.form.send}</span>
               </button>
             </form>
           </div>
