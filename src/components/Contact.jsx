@@ -13,7 +13,7 @@ const SUPABASE_URL = "https://wngdyuvcyiseauwxyqrs.supabase.co";        // Rempl
 // La clé publique est généralement utilisée pour les opérations côté client
 // et la clé secrète est utilisée côté serveur.
 const TA_CLE_PUBLIQUE = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InduZ2R5dXZjeWlzZWF1d3h5cXJzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NTQ5MTI1NTIsImV4cCI6MjA3MDQ4ODU1Mn0.ZPHckuntDXDABdLdS55eEuWs6elk520SHOeud1blE_0";
-const SUPABASE_ANON_KEY = TA_CLE_PUBLIQUE;            
+const SUPABASE_ANON_KEY = TA_CLE_PUBLIQUE;  
 
  // Ta clé reCAPTCHA v2
 // Remplace par ta clé reCAPTCHA v2

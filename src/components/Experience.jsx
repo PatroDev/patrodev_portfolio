@@ -57,7 +57,7 @@ const Experience = ({ t }) => {
       description: t.experience.projects.icpeWebsite.description,
       achievements: t.experience.projects.icpeWebsite.achievements,
       image: '/projects/icpe-website.png',
-      demoLink: 'https://icpeliberia.fast-page.org',
+      demoLink: 'https://icpe-website.vercel.app',
       color: 'from-orange-500 to-orange-600'
     },
     {
