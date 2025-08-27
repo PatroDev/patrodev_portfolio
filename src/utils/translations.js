@@ -141,7 +141,18 @@ export const translations = {
             "Mise en avant dynamique des projets à travers une galerie filtrable",
             "Design responsive et esthétique avec Bootstrap pour une navigation fluide sur tous les appareils"
           ]
-        }
+        },
+        biniportfolio: {
+          title: "Site vitrine pour un portfolio personnel",
+          period: "Août 2025",
+          description: "Création d'un site vitrine pour présenter les projets personnels et professionnels d'un architecte en formation, avec un accent sur le design et l'expérience utilisateur.",
+          achievements: [
+            "Conception stylisée de façon spéciale pour architecture et design3D",
+            "Développement front-end avec Next.js et TailwindCSS",
+            "Intégration d'une galerie d'images pour les projets",
+            "Optimisation des performances et du référencement"
+          ]
+        },
       }
     },
     education: {
@@ -335,7 +346,18 @@ export const translations = {
             "Dynamic project gallery with filterable showcase",
             "Responsive and elegant interface using Bootstrap for seamless navigation on all devices"
           ]
-        }
+        },
+        biniportfolio: {
+          title: "Showcase Website for a Personal Portfolio",
+          period: "August 2025",
+          description: "Creation of a showcase website to present the personal and professional projects of a trainee architect, with a focus on design and user experience.",
+          achievements: [
+            "Stylized design specifically for architecture and 3D design",
+            "Front-end development with Next.js and TailwindCSS",
+            "Integration of an image gallery for projects",
+            "Optimization of performance and SEO"
+          ]
+        },
       }
     },
     education: {

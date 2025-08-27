@@ -84,8 +84,21 @@ const Experience = ({ t }) => {
       achievements: t.experience.projects.decorsite.achievements,
       image: '/projects/decor-site.png',
       demoLink: 'https://decor-site-major.vercel.app',
+      color: 'from-yellow-500 to-yellow-600'
+    },
+    {
+      id: 'bini-portfolio',
+      title: t.experience.projects.biniportfolio.title,
+      company: 'BINI PORTFOLIO',
+      location: 'Marrakech, Morocco',
+      period: t.experience.projects.biniportfolio.period,
+      technologies: ['TailwindCSS', 'Next.js', 'TypeScript', 'HTML', 'CSS', 'React', 'framer-motion', 'lucide-react'],
+      description: t.experience.projects.biniportfolio.description,
+      achievements: t.experience.projects.biniportfolio.achievements,
+      image: '/projects/bini-portfolio.png',
+      demoLink: 'https://bini-a-portfolio.vercel.app',
       color: 'from-orange-500 to-orange-600'
-    }
+    },
   ];
 
   return (
